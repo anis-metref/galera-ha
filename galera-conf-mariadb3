@@ -1,0 +1,15 @@
+[galera]
+# Mandatory settings
+wsrep_on                 = ON
+wsrep_provider           = /usr/lib64/galera/libgalera_smm.so
+wsrep_cluster_name       = "MariaDB Galera Cluster"
+wsrep_cluster_address    = gcomm://192.168.10.10,192.168.10.11,192.168.10.12
+binlog_format            = row
+default_storage_engine   = InnoDB
+innodb_autoinc_lock_mode = 2
+innodb_buffer_pool_size  = 128M
+wsrep_node_name          = DB3
+wsrep_node_address       = 192.168.10.12
+wsrep_sst_method         = rsync
+wsrep_provider_options   = "pc.ignore_quorum=true"
+bind-address             = 0.0.0.0

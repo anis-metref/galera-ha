@@ -1,0 +1,24 @@
+global_defs {
+        enable_script_security
+}
+
+vrrp_script chk_haproxy {
+     script "/usr/bin/pgrep haproxy"
+     interval 2
+ }
+ vrrp_instance VI_1 {
+    interface ens160
+    state MASTER
+    priority 100
+    virtual_router_id 103
+    unicast_src_ip 192.168.10.3
+    unicast_peer {
+      192.168.10.4
+    }
+    virtual_ipaddress {
+      192.168.10.2
+    }
+    track_script {
+       chk_haproxy
+    }
+ }
