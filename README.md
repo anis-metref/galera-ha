@@ -1,4 +1,4 @@
-## Clusteur galera / HA webserver
+### Clusteur galera / HA webserver
 
 ## Haute disponibilité des serveurs web
 
