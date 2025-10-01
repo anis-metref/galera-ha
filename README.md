@@ -1,6 +1,6 @@
-### Clusteur galera / HA webserver
+## Clusteur galera / HA webserver
 
-## Haute disponibilité des serveurs web
+### Haute disponibilité des serveurs web
 
 Ce lab vous guide pas à pas pour mettre en place un environnement de haute disponibilité de serveurs web comprenant un cluster de bases de données MariaDB Galera, un load balancing HAProxy avec Keepalived pour la redondance, et des serveurs web Wordpress sur Rocky Linux dans VMware Workstation.
 
